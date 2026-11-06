@@ -53,6 +53,8 @@ first stable release will be its first [Date Version](https://datevers.ing) (`YY
 release date, with `-1`, `-2`… for later releases the same day), and there will be no 1.0.0. See
 [CHANGELOG.md](CHANGELOG.md) for what changed in each release.
 
+Releases are made and tagged on `test`, and go live when its pull request into `main` is merged (see [CONTRIBUTING.md](CONTRIBUTING.md#branches)).
+
 ## License
 
 Copyright (c) 2026 Stux.Group. All rights reserved.

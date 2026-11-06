@@ -25,6 +25,12 @@ are usually small too.
   removing a page, edit `PAGES` in `scripts/build-sitemap.py` and run `python scripts/build-sitemap.py`.
 - General contact uses `hello@stuxedo.com`; legal-page contact uses `legal@stuxedo.com`.
 
+## Branches
+
+- Work on `test`, or on a feature branch off it. Never push to `main`
+- Changes reach `main` only through a pull request from `test` into `main`, which needs CI to pass and is reviewed and merged by Leo
+- Merging into `main` deploys the site to GitHub Pages; release commits and tags are made on `test` (`git push origin test --tags`) and go live when the pull request is merged
+
 ## Versioning
 
 This project is pre-stable and uses [Semantic Versioning](https://semver.org) on `0.x.y`. Its first
