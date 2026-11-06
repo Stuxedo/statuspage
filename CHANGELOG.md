@@ -7,6 +7,12 @@ This project is pre-stable, so it uses [Semantic Versioning](https://semver.org)
 first stable release will be its first [Date Version](https://datevers.ing) (`YY.MM.DD`, the UTC
 release date), with no 1.0.0.
 
+## v0.1.1
+
+### Changed
+
+- **Work happens on `test`.** Changes reach `main` only through a pull request from `test` (CI now runs on pushes to `test` too), and releases are made and tagged on `test`. CONTRIBUTING has a Branches section, and the README's Versioning section says so.
+
 ## v0.1.0
 
 ### Added
