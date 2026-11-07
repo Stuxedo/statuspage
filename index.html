@@ -375,8 +375,12 @@
             box-shadow: 0 0 8px currentColor;
         }
 
-        .live[data-status="degraded"] .live-dot { background: #ffa64d; }
+        .live[data-status="degraded"] .live-dot,
+        .live[data-status="partial"] .live-dot { background: #ffa64d; }
         .live[data-status="down"] .live-dot { background: #ff4d4d; }
+
+        /* On the silver Web Status panel, a dark green pill so the white text reads. */
+        .tile-web .live { background: rgba(3, 47, 20, 0.88); }
 
         /* ── Footer ── */
         .site-footer {
@@ -457,6 +461,7 @@
                 <span class="tile-name">Web Status</span>
                 <p class="tile-about">Websites, email and web hosting</p>
                 <p class="tile-url">status.stuxedo.dev</p>
+                <span class="live" id="web-live" hidden><span class="live-dot"></span><span id="web-live-text"></span></span>
             </a>
             <a class="tile tile-server" href="https://status.stuxedo.net/">
                 <img class="tile-icon" src="assets/img/stuxedo-server-status-icon.png" alt="" width="76" height="76">
@@ -507,19 +512,25 @@
         })();
     </script>
     <script>
-        // The servers' overall status, from the summary Stuxedo Server Status (GitHup) publishes.
+        // Live badges on both buttons. Server Status: the summary Stuxedo Server Status (GitHup) publishes.
+        // Web Status: the state Stuxedo/Status's "Web status" workflow reads from status.stuxedo.dev every
+        // 5 minutes (that page can't be read cross-site from here). A badge stays hidden if its file can't be read.
         (function () {
-            var LABELS = { up: 'All servers operational', degraded: 'Some servers degraded', down: 'Some servers down' };
-            fetch('https://raw.githubusercontent.com/Stuxedo/Status/main/data/summary.json', { cache: 'no-store' })
-                .then(function (r) { return r.ok ? r.json() : null; })
-                .then(function (s) {
-                    if (!s || !LABELS[s.status]) return;
-                    var el = document.getElementById('server-live');
-                    el.setAttribute('data-status', s.status);
-                    document.getElementById('server-live-text').textContent = LABELS[s.status];
-                    el.hidden = false;
-                })
-                .catch(function () { /* leave it hidden */ });
+            var DATA = 'https://raw.githubusercontent.com/Stuxedo/Status/main/data/';
+            function badge(file, id, labels) {
+                fetch(DATA + file, { cache: 'no-store' })
+                    .then(function (r) { return r.ok ? r.json() : null; })
+                    .then(function (s) {
+                        if (!s || !labels[s.status]) return;
+                        var el = document.getElementById(id);
+                        el.setAttribute('data-status', s.status);
+                        document.getElementById(id + '-text').textContent = labels[s.status];
+                        el.hidden = false;
+                    })
+                    .catch(function () { /* leave it hidden */ });
+            }
+            badge('summary.json', 'server-live', { up: 'All servers operational', degraded: 'Some servers degraded', partial: 'Some servers down', down: 'Servers down' });
+            badge('web-status.json', 'web-live', { up: 'All web services operational', degraded: 'Some web services degraded', down: 'Web services disrupted' });
         })();
     </script>
     <script>
