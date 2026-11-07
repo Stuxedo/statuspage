@@ -7,6 +7,16 @@ This project is pre-stable, so it uses [Semantic Versioning](https://semver.org)
 first stable release will be its first [Date Version](https://datevers.ing) (`YY.MM.DD`, the UTC
 release date), with no 1.0.0.
 
+## v0.2.0
+
+### Added
+
+- **A live badge on the Web Status button**, like the one on Server Status: "All web services operational", "Some web services degraded" or "Web services disrupted", read from the state Stuxedo/Status's Web status workflow saves from status.stuxedo.dev every 5 minutes. It stays hidden if that can't be read.
+
+### Changed
+
+- The Server Status badge also understands a partial outage ("Some servers down").
+
 ## v0.1.1
 
 ### Changed
