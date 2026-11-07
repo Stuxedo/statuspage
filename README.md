@@ -48,9 +48,9 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Versioning
 
-This project is pre-stable, so it uses [Semantic Versioning](https://semver.org) on `0.x.y`. Its
-first stable release will be its first [Date Version](https://datevers.ing) (`YY.MM.DD`, the UTC
-release date, with `-1`, `-2`… for later releases the same day), and there will be no 1.0.0. See
+Since v26.11.07, its first stable release, this project uses [Date Versioning](https://datevers.ing):
+the UTC release date as `YY.MM.DD`, with `-1`, `-2`… for later releases the same day. Earlier releases
+(`v0.x.y`) used [Semantic Versioning](https://semver.org); it never goes back to them, and there is no 1.0.0. See
 [CHANGELOG.md](CHANGELOG.md) for what changed in each release.
 
 Releases are made and tagged on `test`, and go live when its pull request into `main` is merged (see [CONTRIBUTING.md](CONTRIBUTING.md#branches)).
