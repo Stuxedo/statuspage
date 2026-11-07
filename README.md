@@ -57,7 +57,7 @@ Releases are made and tagged on `test`, and go live when its pull request into `
 
 ## License
 
-Copyright (c) 2026 Stux.Group. All rights reserved.
+Copyright (c) 2026 Stux.Group. All rights reserved. This repository is not licensed for reuse or redistribution, see [LICENSE](LICENSE).
 
 ---
 
