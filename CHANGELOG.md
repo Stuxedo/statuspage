@@ -7,6 +7,12 @@ This project is pre-stable, so it uses [Semantic Versioning](https://semver.org)
 first stable release will be its first [Date Version](https://datevers.ing) (`YY.MM.DD`, the UTC
 release date), with no 1.0.0.
 
+## v0.2.1
+
+### Changed
+
+- **All rights reserved.** The License section now reads "Copyright (c) 2026 Stux.Group. All rights reserved. This repository is not licensed for reuse or redistribution", and a `LICENSE` file says the same.
+
 ## v0.2.0
 
 ### Added
