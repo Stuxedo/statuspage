@@ -7,12 +7,18 @@ Since v26.11.07, its first stable release, this project uses [Date Versioning](h
 the UTC release date as `YY.MM.DD`, with `-1`, `-2`… for later releases the same day. Earlier releases
 (`v0.x.y`) used [Semantic Versioning](https://semver.org); it never goes back to them, and there is no 1.0.0.
 
+## v26.11.07-1
+
+### Fixed
+
+- **CI passes again.** The v26.11.07 changelog entry had a bare link, which the Markdown check rejects.
+
 ## v26.11.07
 
 ### Changed
 
-- **First stable release.** Stuxedo Status is now stable, and this is its first Date Versioning release
-  (https://datevers.ing): `YY.MM.DD`, the UTC release date, with `-1`, `-2`… for later releases the same day.
+- **First stable release.** Stuxedo Status is now stable, and this is its first [Date Versioning](https://datevers.ing)
+  release: `YY.MM.DD`, the UTC release date, with `-1`, `-2`… for later releases the same day.
   There is no 1.0.0, and it never goes back to `0.x.y`. The README, CONTRIBUTING and this changelog say so.
 
 ## v0.2.1
