@@ -7,6 +7,12 @@ Since v26.11.07, its first stable release, this project uses [Date Versioning](h
 the UTC release date as `YY.MM.DD`, with `-1`, `-2`… for later releases the same day. Earlier releases
 (`v0.x.y`) used [Semantic Versioning](https://semver.org); it never goes back to them, and there is no 1.0.0.
 
+## v26.11.08
+
+### Changed
+
+- **The Web Status badge comment** says the state is read on a best-effort 5-minute schedule rather than every 5 minutes.
+
 ## v26.11.07-1
 
 ### Fixed
