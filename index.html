@@ -513,8 +513,8 @@
     </script>
     <script>
         // Live badges on both buttons. Server Status: the summary Stuxedo Server Status (GitHup) publishes.
-        // Web Status: the state Stuxedo/Status's "Web status" workflow reads from status.stuxedo.dev every
-        // 5 minutes (that page can't be read cross-site from here). A badge stays hidden if its file can't be read.
+        // Web Status: the state Stuxedo/Status's "Web status" workflow reads from status.stuxedo.dev on a
+        // best-effort 5-minute schedule (that page can't be read cross-site from here). A badge stays hidden if its file can't be read.
         (function () {
             var DATA = 'https://raw.githubusercontent.com/Stuxedo/Status/main/data/';
             function badge(file, id, labels) {
