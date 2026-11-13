@@ -7,6 +7,18 @@ Since v26.11.07, its first stable release, this project uses [Date Versioning](h
 the UTC release date as `YY.MM.DD`, with `-1`, `-2`… for later releases the same day. Earlier releases
 (`v0.x.y`) used [Semantic Versioning](https://semver.org); it never goes back to them, and there is no 1.0.0.
 
+## v26.11.13-1
+
+### Fixed
+
+- **Registered office country.** The Imprint page now gives the full registered office, ending in "United Kingdom": 124 City Road, London, EC1V 2NX, England, United Kingdom.
+
+## v26.11.13
+
+### Changed
+
+- **New registered office.** The Imprint page now shows Stux Group Ltd's new registered office, 124 City Road, London, EC1V 2NX, England (it was 82a James Carter Road, Mildenhall). The company number and "Registered in England and Wales" are unchanged.
+
 ## v26.11.08
 
 ### Changed
