@@ -10,7 +10,7 @@ are usually small too.
 ## Getting started
 
 1. **Fork the repository** and clone your fork locally.
-2. **Run it locally** with `./dev-server.sh` (or `dev-server.bat` on Windows) and open the printed URL.
+2. **Run it locally** with `./dev-server.sh` (or `dev-server.bat` on Windows) and open the printed URL. Add `--lan` to open it from a phone or another device on your network: it listens on every interface instead of `127.0.0.1` only and prints the addresses to open (usually the `192.168.x.x` one).
 3. **Make your changes**. There's no build step.
 4. **Open a pull request** against `main` with a clear description of what changed and why.
 

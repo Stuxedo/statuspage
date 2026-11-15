@@ -7,6 +7,12 @@ Since v26.11.07, its first stable release, this project uses [Date Versioning](h
 the UTC release date as `YY.MM.DD`, with `-1`, `-2`… for later releases the same day. Earlier releases
 (`v0.x.y`) used [Semantic Versioning](https://semver.org); it never goes back to them, and there is no 1.0.0.
 
+## v26.11.15
+
+### Added
+
+- **`--lan` for the dev server.** `./dev-server.sh --lan` (or `dev-server.bat --lan`) makes the local preview listen on every interface, so you can open the site from a phone or another device on the same network. It prints the addresses to open, usually the `192.168.x.x` one; allow PHP through the firewall if asked. Without it, the server stays on `127.0.0.1` only, as before.
+
 ## v26.11.13-1
 
 ### Fixed
