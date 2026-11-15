@@ -8,6 +8,17 @@ REM stale the way a hardcoded version number does.
 set "DIR=%~dp0"
 set /p VERSION=<"%DIR%VERSION.md"
 
+REM Releases are made on test (or a branch off it). staging and main only change through
+REM pull requests: test -> staging -> main.
+for /f "delims=" %%b in ('git rev-parse --abbrev-ref HEAD') do set "BRANCH=%%b"
+if "%BRANCH%"=="main" goto wrongbranch
+if "%BRANCH%"=="staging" goto wrongbranch
+goto branchok
+:wrongbranch
+echo You're on %BRANCH%. Releases are made on test, then go test -^> staging -^> main through pull requests: git switch test
+exit /b 1
+:branchok
+
 REM Before the first stable release: Semantic Versioning on 0.x.y (https://semver.org).
 REM From the first stable release on: Date Versioning (https://datevers.ing), the UTC release date
 REM as YY.MM.DD, plus -1, -2... for later releases that day. No 1.0.0, and no going back to 0.x.y.
@@ -41,4 +52,6 @@ if errorlevel 1 (
     echo Tag v%VERSION% already exists - skipping.
 )
 
-for /f %%b in ('git branch --show-current') do echo Push with: git push origin %%b v%VERSION%
+echo Push with: git push origin %BRANCH% v%VERSION%
+echo Then open a pull request into staging: gh pr create --base staging --head %BRANCH%
+echo Once staging is checked, open one from staging into main: gh pr create --base main --head staging

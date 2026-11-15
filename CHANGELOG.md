@@ -7,6 +7,12 @@ Since v26.11.07, its first stable release, this project uses [Date Versioning](h
 the UTC release date as `YY.MM.DD`, with `-1`, `-2`… for later releases the same day. Earlier releases
 (`v0.x.y`) used [Semantic Versioning](https://semver.org); it never goes back to them, and there is no 1.0.0.
 
+## v26.11.15-1
+
+### Changed
+
+- **Going live now takes two steps: `test` → `staging` → `main`.** `staging` is the last check before live and only changes through a pull request from `test`; `main` (live) only changes through a pull request from `staging`. `commit.sh` and `commit.bat` refuse to run on `staging` as well as `main`, and print the push command and both pull request commands after tagging. CONTRIBUTING's "Branches and going live" and the README's Versioning section describe the flow; CI also runs on pushes to `staging`.
+
 ## v26.11.15
 
 ### Added

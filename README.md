@@ -53,7 +53,7 @@ the UTC release date as `YY.MM.DD`, with `-1`, `-2`… for later releases the sa
 (`v0.x.y`) used [Semantic Versioning](https://semver.org); it never goes back to them, and there is no 1.0.0. See
 [CHANGELOG.md](CHANGELOG.md) for what changed in each release.
 
-Releases are made and tagged on `test`, and go live when its pull request into `main` is merged (see [CONTRIBUTING.md](CONTRIBUTING.md#branches)).
+Releases are made and tagged on `test`, then go live through two pull requests: `test` into `staging`, then `staging` into `main` (see [CONTRIBUTING.md](CONTRIBUTING.md#branches-and-going-live)).
 
 ## License
 
