@@ -40,7 +40,7 @@ python -I scripts/badge-icons.py stuxedo icon-light.png assets/img
 Run `./dev-server.sh` (or `dev-server.bat`, add a port as the last argument) to serve the site at
 `http://127.0.0.1:8000` the way GitHub Pages does, with the dev-mode banner on. Add `--no-dev-mode`
 to see it exactly as production does. It uses PHP 7.4's built-in server (set `PHP_BIN` to pick
-another PHP).
+another PHP). Add `--lan` to open it from a phone or another device on your network: it listens on every interface instead of `127.0.0.1` only and prints the addresses to open (usually the `192.168.x.x` one).
 
 ## Contributing
 
@@ -53,7 +53,7 @@ the UTC release date as `YY.MM.DD`, with `-1`, `-2`… for later releases the sa
 (`v0.x.y`) used [Semantic Versioning](https://semver.org); it never goes back to them, and there is no 1.0.0. See
 [CHANGELOG.md](CHANGELOG.md) for what changed in each release.
 
-Releases are made and tagged on `test`, and go live when its pull request into `main` is merged (see [CONTRIBUTING.md](CONTRIBUTING.md#branches)).
+Releases are made and tagged on `test`, then go live through two pull requests: `test` into `staging`, then `staging` into `main` (see [CONTRIBUTING.md](CONTRIBUTING.md#branches-and-going-live)).
 
 ## License
 
