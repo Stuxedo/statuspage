@@ -7,6 +7,18 @@ Since v26.11.07, its first stable release, this project uses [Date Versioning](h
 the UTC release date as `YY.MM.DD`, with `-1`, `-2`… for later releases the same day. Earlier releases
 (`v0.x.y`) used [Semantic Versioning](https://semver.org); it never goes back to them, and there is no 1.0.0.
 
+## v26.11.17-2
+
+### Changed
+
+- **Only the Web Status tile's shine is green.** The green hover shine from v26.11.17-1 is now only on the light Web Status tile, where white was hard to see. The Server Status tile's shine is white again.
+
+## v26.11.17-1
+
+### Changed
+
+- **The web services' hover shine is green.** The shine that sweeps across a web service tile on hover is now Stuxedo green, like the tile's hover border and glow, instead of white, which was hard to see on light tiles.
+
 ## v26.11.17
 
 ### Fixed
