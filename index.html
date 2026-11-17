@@ -235,7 +235,7 @@
             pointer-events: none;
         }
 
-        /* A green shine that sweeps across on hover (green so it shows on light tiles too). */
+        /* A shine that sweeps across on hover. */
         .tile::after {
             content: '';
             position: absolute;
@@ -244,7 +244,7 @@
             left: -60%;
             width: 40%;
             transform: skewX(-18deg);
-            background: linear-gradient(90deg, transparent, rgba(75, 247, 8, 0.45), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
             pointer-events: none;
             opacity: 0;
         }
@@ -325,6 +325,10 @@
                 linear-gradient(160deg, #ffffff 0%, #eef1ef 45%, #d6dcd8 100%);
         }
 
+        /* White doesn't show on the light Web Status tile, so its shine is green. */
+        .tile-web::after {
+            background: linear-gradient(90deg, transparent, rgba(75, 247, 8, 0.45), transparent);
+        }
         .tile-web .tile-brand { color: #6b726e; }
         .tile-web .tile-name {
             color: #1f9a00;
