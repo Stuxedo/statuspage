@@ -325,6 +325,10 @@
                 linear-gradient(160deg, #ffffff 0%, #eef1ef 45%, #d6dcd8 100%);
         }
 
+        /* White doesn't show on the light Web Status tile, so its shine is green. */
+        .tile-web::after {
+            background: linear-gradient(90deg, transparent, rgba(75, 247, 8, 0.45), transparent);
+        }
         .tile-web .tile-brand { color: #6b726e; }
         .tile-web .tile-name {
             color: #1f9a00;
