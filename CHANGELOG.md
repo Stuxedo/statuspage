@@ -7,6 +7,12 @@ Since v26.11.07, its first stable release, this project uses [Date Versioning](h
 the UTC release date as `YY.MM.DD`, with `-1`, `-2`… for later releases the same day. Earlier releases
 (`v0.x.y`) used [Semantic Versioning](https://semver.org); it never goes back to them, and there is no 1.0.0.
 
+## v26.11.17-3
+
+### Changed
+
+- **Copyright Stuxedo.** The copyright notices now name Stuxedo instead of Stux.Group ("Copyright (c) 2026 Stuxedo. All rights reserved."), in `LICENSE`, `README.md`, `scripts/build-sitemap.py`. Stuxedo is still part of the Stux.Group brand, and the Imprint still names the company that operates it.
+
 ## v26.11.17-2
 
 ### Changed
