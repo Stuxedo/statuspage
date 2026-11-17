@@ -7,6 +7,12 @@ Since v26.11.07, its first stable release, this project uses [Date Versioning](h
 the UTC release date as `YY.MM.DD`, with `-1`, `-2`… for later releases the same day. Earlier releases
 (`v0.x.y`) used [Semantic Versioning](https://semver.org); it never goes back to them, and there is no 1.0.0.
 
+## v26.11.17
+
+### Fixed
+
+- **The footer's copyright names Stuxedo.** Every page's footer (the status page, Changelog, Boring Legal Stuff and its six pages, and the Sitemap) now reads "© 2026 Stuxedo. All rights reserved." instead of Stux.Group, like the other Stuxedo pages. The Imprint still says who operates Stuxedo.
+
 ## v26.11.15-1
 
 ### Changed
